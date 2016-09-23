@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<br>
+<h1>{{name}}'s microblog!</h1>
+<br/>
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+<br>
+<form action = "/create-message" method = "post" >
+    <input type="text" placeholder="Write a Message" name="message"/>
+    <button type="submit">Submit</button>
+</form>
+<br/>
+<h2>{{name}}'s messages:</h2>
+<br>
+<ol>
+{{#messages}}
+<li>{{message}}</li>
+{{/messages}}
+</ol>
+<br>
+<form action="/delete-message" method="post">
+    <input type="text" placeholder="Message #" name="deleteNumber"/>
+    <button type="submit">Delete Message</button>
+</form>
+<br>
+<form action="/edit-message" method="post">
+    <input type="text" placeholder="Message #" name="editMessageNum"/>
+    <input type="text" placeholder="replace text" name="editMessageText"/>
+    <button type="submit">Edit Message</button>
+</form>
+</body>
+</html>

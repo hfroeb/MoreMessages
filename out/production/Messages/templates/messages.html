@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<br>
+<h1>{{name}}'s microblog!</h1>
+<br/>
+<form action = "/createMessage" method = "post" >
+    <input type="text" placeholder="Write a Message" name="message"/>
+    <button type="submit">Submit</button>
+</form>
+<br/>
+<h2>{{name}}'s messages:</h2>
+</br>
+{{#messages}}
+{{message}}
+</br>
+{{/messages}}
+</body>
+</html>
